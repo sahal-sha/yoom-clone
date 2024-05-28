@@ -25,7 +25,7 @@ const Chatting = () => {
         ref={lastMessagRef}
         
         >
-        <Message  message={message} /> 
+        <Message key={message._id} message={message} /> 
         </div>
         
         ))}

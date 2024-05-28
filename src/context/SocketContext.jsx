@@ -26,8 +26,7 @@ export const SocketContextProvider = ({children}) =>{
             query:{
                 userId: authUser._id,    
             },
-        }
-    );
+        });
 
     setSocket(socket);
    //socket.on() is used to listen to the events. can used both on client and server side
@@ -44,7 +43,7 @@ export const SocketContextProvider = ({children}) =>{
     }
    }
 
-    },[authUser])
+    },[authUser]);
      
     return (
      <SocketContext.Provider value={{socket,onlineUsers}}>

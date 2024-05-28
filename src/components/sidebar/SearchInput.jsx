@@ -18,10 +18,7 @@ const SearchInput = () => {
             return toast.error("Search term must be at least 3 characters long");
         }
 
-        // Ensure conversations is an array
-        if (!Array.isArray(conversations)) {
-            return toast.error("Conversations data is invalid");
-        }
+       
 
         // Find conversation
         const conversation = conversations.find((c) => 
@@ -43,9 +40,10 @@ const SearchInput = () => {
                 placeholder='Search…'
                 className='input input-bordered rounded-full'
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
-            />
-            <button type='submit' className='btn btn-circle text-white'>
+                onChange={(e) => setSearch(e.target.value)} 
+                
+                />
+              <button type='submit' className='btn btn-circle text-white'>
                 <FcSearch className='w-6 h-6 outline-none' />
             </button>
         </form>
